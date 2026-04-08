@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Burger Company</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+    <h2 class="logo">Burger Co.</h2>
+    <input type="text" class="search" placeholder="Search burgers..." id="searchInput">
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+    <h1>THE BUN IN FUN</h1>
+    <p>Kanpur's Culinary Gem</p>
+</section>
+
+<!-- FILTER BUTTONS -->
+
+<div class="filters">
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="veg">Veg</button>
+    <button data-filter="chicken">Chicken</button>
+</div>
+
+<!-- MENU GRID -->
+
+<div class="grid" id="grid"></div>
+
+<!-- CART BUTTON -->
+
+<div class="cart-btn" id="cartBtn">
+    Cart (0)
+</div>
+
+<!-- CART PANEL -->
+
+<div class="cart-panel" id="cartPanel">
+    <h3>Your Cart</h3>
+    <ul id="cartItems"></ul>
+    <h4 id="total">Total: ₹0</h4>
+    <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+</div>
+
+<!-- POPUP -->
+
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <img id="popImg">
+        <h3 id="popName"></h3>
+        <p id="popPrice"></p>
+
+    <div class="qty-control">
+        <button id="minusBtn">-</button>
+        <span id="qty">1</span>
+        <button id="plusBtn">+</button>
+    </div>
+
+    <button class="add-btn" id="addToCartBtn">Add to Cart</button>
+</div>
+</div>
+
+<!-- CHECKOUT MODAL -->
+
+<div class="checkout-modal" id="checkoutModal">
+    <div class="checkout-box">
+        <h2>Order Successful 🎉</h2>
+        <p>Your delicious food is on the way!</p>
+        <button id="closeCheckout">Close</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+<!-- LOADER -->
+
+<div id="loader">
+    <h1>Burger Co.</h1>
+</div>
+
+<!-- PARTICLES -->
+
+<canvas id="particles"></canvas>
+
+</body>
+</html>
