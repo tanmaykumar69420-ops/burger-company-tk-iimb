@@ -433,7 +433,42 @@ body {
     box-shadow: 0 0 30px rgba(255, 0, 255, 0.5);
     border: 1px solid rgba(255, 0, 255, 0.6);
 }
+/* FOUNDER SECTION */
+.founder {
+    padding: 80px 60px;
+    display: flex;
+    justify-content: center;
+}
 
+/* BOX */
+.founder-box {
+    max-width: 600px;
+    text-align: center;
+    background: rgba(20, 20, 40, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* TITLE */
+.founder-box h2 {
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+/* TEXT */
+.founder-box p {
+    font-size: 15px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* NAME */
+.founder-box h4 {
+    margin-top: 15px;
+    color: #ffcc00;
+    font-size: 14px;
+}
 /* FOOTER */
 footer {
     text-align: center;
