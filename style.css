@@ -3,107 +3,152 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 /* BODY */
 body {
-    background-color: #0d1117;
-    color: white;
+    background: linear-gradient(to bottom, #0b0f1a, #06080f);
+    color: #fff;
 }
 
 /* NAVBAR */
 .navbar {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    padding: 15px 40px;
-    background-color: #111827;
-    border-bottom: 1px solid #222;
+    padding: 15px 60px;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    background: rgba(10, 10, 20, 0.7);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.nav-left a,
-.nav-right a {
-    margin: 0 15px;
+/* NAV LINKS */
+.nav-left, .nav-right {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-left {
+    justify-content: flex-start;
+}
+
+.nav-right {
+    justify-content: flex-end;
+}
+
+.navbar a {
     text-decoration: none;
-    color: white;
-    font-weight: 500;
+    color: #aaa;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s;
 }
 
-.nav-left a:hover,
-.nav-right a:hover {
+.navbar a:hover {
     color: #ffcc00;
 }
 
-/* LOGO CENTER */
-.logo img {
-    height: 60px;
+/* LOGO */
+.logo {
+    display: flex;
+    justify-content: center;
 }
 
-/* HERO SECTION */
+.logo img {
+    height: 70px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+}
+
+/* HERO */
 .hero {
     position: relative;
-    text-align: center;
+    height: 350px;
+    overflow: hidden;
 }
 
 .hero img {
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
-    opacity: 0.6;
+    filter: brightness(40%);
 }
 
 .hero-text {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 40px;
+    left: 60px;
 }
 
 .hero-text h1 {
-    font-size: 40px;
+    font-size: 48px;
+    font-weight: bold;
     color: #ffcc00;
+    letter-spacing: 2px;
 }
 
 .hero-text p {
-    font-size: 18px;
+    color: #ccc;
+    margin-top: 5px;
 }
 
-/* MENU SECTION */
+/* MENU */
 .menu {
-    padding: 40px;
+    padding: 60px;
 }
 
+/* SECTION TITLE */
 .menu h2 {
-    margin: 30px 0 15px;
+    font-size: 22px;
+    margin-bottom: 20px;
     color: #ffcc00;
+    letter-spacing: 1px;
 }
 
 /* GRID */
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
 }
 
 /* CARD */
 .card {
-    background-color: #161b22;
+    background: linear-gradient(145deg, #111827, #0b0f1a);
+    border-radius: 15px;
     padding: 20px;
-    text-align: center;
-    border-radius: 12px;
-    transition: 0.3s;
-    border: 1px solid #222;
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
 }
 
+/* SUBTLE GLOW BORDER */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+    padding: 1px;
+    background: linear-gradient(120deg, transparent, #ffcc00, transparent);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    opacity: 0.2;
+}
+
+/* IMAGE */
 .card img {
     width: 100%;
-    height: 120px;
+    height: 130px;
     object-fit: contain;
+    margin-bottom: 10px;
 }
 
+/* TEXT */
 .card h3 {
-    margin: 10px 0;
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
 .card p {
@@ -111,23 +156,23 @@ body {
     font-weight: bold;
 }
 
-/* HOVER EFFECT */
+/* HOVER */
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 25px rgba(255, 204, 0, 0.2);
 }
 
-/* HIGHLIGHT CARD (Ghost Rider style) */
+/* HIGHLIGHT (MAIN BURGER) */
 .highlight {
-    border: 2px solid #ffcc00;
-    box-shadow: 0 0 20px rgba(255, 204, 0, 0.7);
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.5);
+    border: 1px solid rgba(255, 0, 255, 0.6);
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #111827;
+    padding: 25px;
     margin-top: 40px;
-    font-size: 14px;
+    color: #777;
+    font-size: 13px;
 }
