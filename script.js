@@ -7,13 +7,13 @@ function showSlide(i) {
     slides[i].classList.add("active");
 }
 
-document.querySelector(".next").onclick = () => {
+document.querySelector(".next").addEventListener("click", () => {
     index = (index + 1) % slides.length;
     showSlide(index);
-};
+});
 
-document.querySelector(".prev").onclick = () => {
+document.querySelector(".prev").addEventListener("click", () => {
     index = (index - 1 + slides.length) % slides.length;
     showSlide(index);
-};
+});
 </script>
