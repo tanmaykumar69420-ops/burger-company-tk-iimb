@@ -90,7 +90,7 @@ body {
 }
 
 .logo img:hover {
-    transform: scale(2.05);
+    transform: scale(1.72);
 }
 /* NAV LINKS */
 .nav-left, .nav-right {
@@ -248,6 +248,13 @@ body {
 .highlight {
     border: 1px solid rgba(255, 0, 255, 0.6);
     box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+}
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
 }
 /* SECTION TITLE */
 .menu h2 {
