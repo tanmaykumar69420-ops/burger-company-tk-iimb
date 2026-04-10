@@ -582,3 +582,63 @@ footer {
   color: #777;
   font-size: 13px;
 }
+/* MOBILE RESPONSIVE FIX */
+@media (max-width: 768px) {
+
+  /* NAVBAR STACK */
+  .navbar {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .nav-left, .nav-right {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .logo img {
+    height: 90px;
+  }
+
+  /* HERO TEXT */
+  .hero-content {
+    left: 20px;
+    bottom: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  /* MENU GRID */
+  .menu {
+    padding: 40px 20px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* MENU ITEMS STACK */
+  .menu-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* REVIEWS */
+  .slides {
+    width: 100%;
+  }
+
+  /* LOCATION */
+  .location-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* FOUNDER */
+  .founder {
+    padding: 40px 20px;
+  }
+
+}
