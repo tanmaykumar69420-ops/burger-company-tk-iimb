@@ -1,97 +1,109 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Burger Company</title>
-
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Company</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+    <!-- HEADER -->
+    <header class="navbar">
+        <div class="nav-left">
+            <a href="#">Menu</a>
+            <a href="#">Location</a>
+        </div>
 
-<nav>
-    <h2 class="logo">Burger Co.</h2>
-    <input type="text" class="search" placeholder="Search burgers..." id="searchInput">
-</nav>
+        <div class="logo">
+            <img src="logo.png" alt="Burger Company Logo">
+        </div>
 
-<!-- HERO -->
+        <div class="nav-right">
+            <a href="#">Reviews</a>
+            <a href="#">Founder's Note</a>
+        </div>
+    </header>
 
-<section class="hero">
-    <h1>THE BUN IN FUN</h1>
-    <p>Kanpur's Culinary Gem</p>
-</section>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <img src="shop.jpg" alt="Burger Shop">
+        <div class="hero-text">
+            <h1>Burger Company</h1>
+            <p>Kanpur’s Culinary Gem</p>
+        </div>
+    </section>
 
-<!-- FILTER BUTTONS -->
+    <!-- MENU SECTION -->
+    <section class="menu">
 
-<div class="filters">
-    <button class="active" data-filter="all">All</button>
-    <button data-filter="veg">Veg</button>
-    <button data-filter="chicken">Chicken</button>
-</div>
+        <h2>Veg Burgers</h2>
+        <div class="menu-grid">
 
-<!-- MENU GRID -->
+            <div class="card">
+                <img src="burger1.png">
+                <h3>Veg Rockstar</h3>
+                <p>₹49</p>
+            </div>
 
-<div class="grid" id="grid"></div>
+            <div class="card">
+                <img src="burger2.png">
+                <h3>Mexican Marvel</h3>
+                <p>₹149</p>
+            </div>
 
-<!-- CART BUTTON -->
+            <div class="card highlight">
+                <img src="burger3.png">
+                <h3>The Ghost Rider</h3>
+                <p>₹159</p>
+            </div>
 
-<div class="cart-btn" id="cartBtn">
-    Cart (0)
-</div>
+        </div>
 
-<!-- CART PANEL -->
+        <h2>Chicken Burgers</h2>
+        <div class="menu-grid">
 
-<div class="cart-panel" id="cartPanel">
-    <h3>Your Cart</h3>
-    <ul id="cartItems"></ul>
-    <h4 id="total">Total: ₹0</h4>
-    <button class="checkout-btn" id="checkoutBtn">Checkout</button>
-</div>
+            <div class="card">
+                <img src="burger4.png">
+                <h3>Tandoori Chicken</h3>
+                <p>₹159</p>
+            </div>
 
-<!-- POPUP -->
+            <div class="card">
+                <img src="burger5.png">
+                <h3>Charcoal Chicken</h3>
+                <p>₹159</p>
+            </div>
 
-<div class="popup" id="popup">
-    <div class="popup-content">
-        <img id="popImg">
-        <h3 id="popName"></h3>
-        <p id="popPrice"></p>
+        </div>
 
-    <div class="qty-control">
-        <button id="minusBtn">-</button>
-        <span id="qty">1</span>
-        <button id="plusBtn">+</button>
-    </div>
+        <h2>Fries & Appetizers</h2>
+        <div class="menu-grid">
 
-    <button class="add-btn" id="addToCartBtn">Add to Cart</button>
-</div>
-</div>
+            <div class="card">
+                <h3>Salted Fries</h3>
+                <p>₹79</p>
+            </div>
 
-<!-- CHECKOUT MODAL -->
+            <div class="card">
+                <h3>Peri Peri Fries</h3>
+                <p>₹89</p>
+            </div>
 
-<div class="checkout-modal" id="checkoutModal">
-    <div class="checkout-box">
-        <h2>Order Successful 🎉</h2>
-        <p>Your delicious food is on the way!</p>
-        <button id="closeCheckout">Close</button>
-    </div>
-</div>
+            <div class="card">
+                <h3>Pizza Pockets</h3>
+                <p>₹109</p>
+            </div>
 
-<script src="script.js"></script>
+        </div>
 
-<!-- LOADER -->
+    </section>
 
-<div id="loader">
-    <h1>Burger Co.</h1>
-</div>
-
-<!-- PARTICLES -->
-
-<canvas id="particles"></canvas>
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Burger Company</p>
+    </footer>
 
 </body>
 </html>
