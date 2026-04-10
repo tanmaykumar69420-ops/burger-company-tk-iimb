@@ -1,19 +1,25 @@
 <script>
-let index = 0;
-const slides = document.querySelectorAll(".slide");
+document.addEventListener("DOMContentLoaded", function () {
 
-function showSlide(i) {
-    slides.forEach(slide => slide.classList.remove("active"));
-    slides[i].classList.add("active");
-}
+    let index = 0;
+    const slides = document.querySelectorAll(".slide");
+    const next = document.querySelector(".next");
+    const prev = document.querySelector(".prev");
 
-document.querySelector(".next").addEventListener("click", () => {
-    index = (index + 1) % slides.length;
-    showSlide(index);
-});
+    function showSlide(i) {
+        slides.forEach(slide => slide.classList.remove("active"));
+        slides[i].classList.add("active");
+    }
 
-document.querySelector(".prev").addEventListener("click", () => {
-    index = (index - 1 + slides.length) % slides.length;
-    showSlide(index);
+    next.addEventListener("click", function () {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+    });
+
+    prev.addEventListener("click", function () {
+        index = (index - 1 + slides.length) % slides.length;
+        showSlide(index);
+    });
+
 });
 </script>
