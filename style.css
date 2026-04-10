@@ -394,12 +394,6 @@ body {
     color: #ffcc00;
     margin-bottom: 30px;
 }
-.slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
 
 /* BUTTONS */
 .prev, .next {
@@ -416,13 +410,6 @@ body {
 .prev:hover, .next:hover {
     background: #ffcc00;
     color: black;
-}
-
-/* SLIDES BOX */
-.slides {
-    width: 400px;
-    height: 150px;
-    position: relative;
 }
 
 /* CARD STYLE */
@@ -485,14 +472,6 @@ body {
     display: flex;
     justify-content: center;
 }
-/* SLIDER */
-.slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
 /* BUTTONS */
 .prev, .next {
     background: transparent;
@@ -567,6 +546,12 @@ body {
 
 .slide.active {
     display: block;
+}
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 /* TEXT */
