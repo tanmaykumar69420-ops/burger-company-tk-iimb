@@ -130,42 +130,125 @@ body {
 }
 
 /* HERO */
+/* HERO SECTION */
 .hero {
     position: relative;
-    height: 350px;
+    height: 420px;
     overflow: hidden;
 }
 
+/* BACKGROUND IMAGE */
 .hero img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(40%);
 }
 
-.hero-text {
+/* DARK OVERLAY (very important for premium look) */
+.hero-overlay {
     position: absolute;
-    bottom: 40px;
-    left: 60px;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.85)
+    );
 }
 
-.hero-text h1 {
-    font-size: 48px;
-    font-weight: bold;
+/* CONTENT POSITIONING */
+.hero-content {
+    position: absolute;
+    bottom: 50px;
+    left: 70px;
+}
+
+/* TITLE */
+.hero-content h1 {
+    font-size: 52px;
+    font-weight: 700;
     color: #ffcc00;
     letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
 }
 
-.hero-text p {
-    color: #ccc;
-    margin-top: 5px;
+/* SUBTEXT */
+.hero-content p {
+    margin-top: 8px;
+    font-size: 18px;
+    color: #d1d5db;
+    letter-spacing: 1px;
 }
 
 /* MENU */
+/* MENU SECTION */
 .menu {
-    padding: 60px;
+    padding: 70px 60px;
 }
 
+/* SECTION BLOCK */
+.menu-section {
+    margin-bottom: 50px;
+}
+
+/* SECTION TITLE */
+.menu-section h2 {
+    font-size: 22px;
+    color: #ffcc00;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* GRID */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+/* ITEM CARD */
+.menu-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    background: rgba(20, 20, 35, 0.6);
+    padding: 15px;
+    border-radius: 12px;
+
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* IMAGE */
+.menu-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* TEXT */
+.item-info h3 {
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.item-info p {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+/* HOVER */
+.menu-item:hover {
+    transform: translateY(-5px);
+    background: rgba(30, 30, 50, 0.8);
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.2);
+}
+
+/* HIGHLIGHT ITEM */
+.highlight {
+    border: 1px solid rgba(255, 0, 255, 0.6);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+}
 /* SECTION TITLE */
 .menu h2 {
     font-size: 22px;
