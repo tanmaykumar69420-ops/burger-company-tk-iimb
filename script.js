@@ -1,4 +1,4 @@
-<script>
+
     document.addEventListener("DOMContentLoaded", function () {
 
     let index = 0;
@@ -32,4 +32,4 @@
 }, 3000);
 
 });
-</script>
+
