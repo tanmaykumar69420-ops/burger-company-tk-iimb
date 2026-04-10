@@ -249,13 +249,6 @@ body {
     border: 1px solid rgba(255, 0, 255, 0.6);
     box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
 }
-.slide {
-    display: none;
-}
-
-.slide.active {
-    display: block;
-}
 /* SECTION TITLE */
 .menu h2 {
     font-size: 22px;
@@ -432,21 +425,6 @@ body {
     position: relative;
 }
 
-/* EACH SLIDE */
-.slide {
-    position: absolute;
-    width: 100%;
-    opacity: 0;
-    transform: translateX(20px);
-    transition: 0.4s;
-}
-
-/* ACTIVE SLIDE */
-.slide.active {
-    opacity: 1;
-    transform: translateX(0);
-}
-
 /* CARD STYLE */
 .slide {
     background: rgba(20,20,40,0.7);
@@ -532,20 +510,6 @@ body {
     position: relative;
 }
 
-/* INDIVIDUAL SLIDE */
-.slide {
-    display: none;
-    text-align: center;
-    padding: 20px;
-    background: rgba(20,20,40,0.7);
-    border-radius: 12px;
-}
-
-/* ACTIVE */
-.slide.active {
-    display: block;
-}
-
 /* TEXT */
 .slide p {
     margin-bottom: 10px;
@@ -569,6 +533,40 @@ body {
 .founder-box h2 {
     color: #ffcc00;
     margin-bottom: 15px;
+}
+/* FINAL SLIDER FIX */
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.prev, .next {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: #ffcc00;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 10px 14px;
+    border-radius: 8px;
+}
+
+.slides {
+    width: 400px;
+    position: relative;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background: rgba(20,20,40,0.7);
+    border-radius: 12px;
+}
+
+.slide.active {
+    display: block;
 }
 
 /* TEXT */
