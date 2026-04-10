@@ -26,6 +26,10 @@
         if (index < 0) index = slides.length - 1;
         showSlide(index);
     });
+        setInterval(() => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+}, 3000);
 
 });
 </script>
