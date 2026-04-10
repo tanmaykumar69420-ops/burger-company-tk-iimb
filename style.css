@@ -394,7 +394,68 @@ body {
     color: #ffcc00;
     margin-bottom: 30px;
 }
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
 
+/* BUTTONS */
+.prev, .next {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: #ffcc00;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background: #ffcc00;
+    color: black;
+}
+
+/* SLIDES BOX */
+.slides {
+    width: 400px;
+    height: 150px;
+    position: relative;
+}
+
+/* EACH SLIDE */
+.slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: 0.4s;
+}
+
+/* ACTIVE SLIDE */
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* CARD STYLE */
+.slide {
+    background: rgba(20,20,40,0.7);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.slide p {
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+.slide h4 {
+    color: #ffcc00;
+}
 /* CONTAINER */
 .reviews-container {
     display: grid;
