@@ -390,7 +390,7 @@ body {
 /* REVIEWS SECTION */
 .reviews {
   padding: 70px 60px;
-  background: rgba(15, 15, 30, 0.6);
+  background: #0a0a0a; 
 }
 
 .reviews h2 {
@@ -442,7 +442,7 @@ body {
 
 /* CARD */
 .review-card {
-  background: rgba(20, 20, 40, 0.7);
+  background: rgba(20, 20, 20, 0.9);
   padding: 20px;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -508,7 +508,7 @@ body {
 .founder-box {
   max-width: 600px;
   text-align: center;
-  background: rgba(20, 20, 40, 0.6);
+  background: rgba(20, 20, 20, 0.85);
   padding: 30px;
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -547,7 +547,7 @@ body {
   display: none;
   text-align: center;
   padding: 20px;
-  background: rgba(20, 20, 40, 0.7);
+  background: rgba(20, 20, 20, 0.9);
   border-radius: 12px;
 }
 
