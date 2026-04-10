@@ -1,23 +1,29 @@
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
 
     let index = 0;
+
     const slides = document.querySelectorAll(".slide");
-    const next = document.querySelector(".next");
-    const prev = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+    const prevBtn = document.querySelector(".prev");
 
     function showSlide(i) {
-        slides.forEach(slide => slide.classList.remove("active"));
+        slides.forEach((slide) => {
+            slide.classList.remove("active");
+        });
+
         slides[i].classList.add("active");
     }
 
-    next.addEventListener("click", function () {
-        index = (index + 1) % slides.length;
+    nextBtn.addEventListener("click", function () {
+        index++;
+        if (index >= slides.length) index = 0;
         showSlide(index);
     });
 
-    prev.addEventListener("click", function () {
-        index = (index - 1 + slides.length) % slides.length;
+    prevBtn.addEventListener("click", function () {
+        index--;
+        if (index < 0) index = slides.length - 1;
         showSlide(index);
     });
 
